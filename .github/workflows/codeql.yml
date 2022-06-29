@@ -40,6 +40,12 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: GitHub Script
+      uses: actions/github-script@v6.1.0
+      with:
+        # The script to run
+        script: "dir C:\\hostedtoolcache\\windows\\CodeQL\\0.0.0-20220615\\x64\\codeql\\csharp\\tools\\"
+
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v2
